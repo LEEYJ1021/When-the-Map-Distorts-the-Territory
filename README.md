@@ -5,6 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-v4.1-green.svg)]()
 
+> **Before running any script:** place `b60w_data.xlsx` at the repository root.  
+> This file is not tracked in git. See [`data/DATA_DESCRIPTION.md`](data/DATA_DESCRIPTION.md) for full schema and loading instructions.
+
 ---
 
 ## Overview
@@ -58,6 +61,16 @@ All four primary tests (H1 χ², H2 z-test, H2 entropy MW, H3 cluster-*z*) survi
 ├── README.md
 ├── requirements.txt
 │
+├── ── Source Data ───────────────────────────────────────────────────
+├── b60w_data.xlsx                  # ★ PRIMARY SOURCE — NOT tracked in git (43.4 MB)
+│                                   #   Place at repo root before running any stage.
+│                                   #   See data/DATA_DESCRIPTION.md for full schema.
+│
+├── ── Data Documentation ────────────────────────────────────────────
+├── data/
+│   └── DATA_DESCRIPTION.md         # Full schema, distributions, quality checks,
+│                                   #   column reference, and loading instructions
+│
 ├── ── Pipeline Scripts ──────────────────────────────────────────────
 ├── stage0_pipeline.py              # Raw patent data ingestion & applicant grouping
 ├── stage1_graph_pipeline.py        # Keyword extraction, graph construction, node features
@@ -84,6 +97,7 @@ All four primary tests (H1 χ², H2 z-test, H2 entropy MW, H3 cluster-*z*) survi
 ├── paper_output_v4/
 │   ├── master_v4.json                          # Full metadata & manuscript rules
 │   ├── methods_sobel_reconciliation_EN.txt     # Methods §3.4 full English narrative
+│   ├── methods_sobel_reconciliation_KR.txt     # Methods §3.4 Korean summary
 │   └── figures/
 │       ├── fig1_theory_v4.png                  # Causal theory model (H1→H2→H3)
 │       ├── fig2_H1_mnar_v4.png                 # H1 MNAR evidence (3-panel)
@@ -100,16 +114,38 @@ All four primary tests (H1 χ², H2 z-test, H2 entropy MW, H3 cluster-*z*) survi
     ├── fix_v3_ICC_diagnostics.csv              # ICC / DEFF per variable
     ├── fix_v3_session_level_mediation.csv      # Session-level gold standard
     ├── fix_v3_GEE_results.csv                  # GEE population-average estimates
-    └── fix_v3_GLMM_results.csv                 # GLMM random-intercept estimates
+    ├── fix_v3_GLMM_results.csv                 # GLMM random-intercept estimates
+    └── fix_v3_reviewer_response.txt            # Reviewer response text (EN)
 ```
 
 ---
 
 ## Data Requirements
 
+### Primary Source (required before any stage)
+
+| File | Size | Tracked in git | Description |
+|---|---|---|---|
+| `b60w_data.xlsx` | 43.4 MB | **NO** | CPC B60W patent corpus, 53,199 records, 37 columns — place at repo root |
+
+Full schema documentation: **[`data/DATA_DESCRIPTION.md`](data/DATA_DESCRIPTION.md)**
+
+Quick facts about the source file:
+
+| Property | Value |
+|---|---|
+| Records | 53,199 granted patents |
+| All with forward citation ≥ 1 | ✔ 100% |
+| Application date range | 1897 – 2025 (analysis window: 1995Q1–2024Q4) |
+| Jurisdictions | 28 (US 71.6%, KR 8.7%, DE 5.7%, EP 4.8%, JP 4.1%) |
+| Top applicant | Toyota Motor Co Ltd (4,362 patents) |
+| Abstract coverage | 81.1% (JP/EP structurally absent — MNAR driver for H1) |
+| B60W60 subgroup patents | 2,210 (first observed 2012Q1; peak 2020) |
+
+### Derived / Intermediate Files
+
 | File | Size | Description |
 |---|---|---|
-| `b60w_data.xlsx` | 43.4 MB | Source patent corpus (CPC B60W, 1995–2024) — **not tracked in git** |
 | `stage4_work/s4_simulations.jsonl` | 6.8 MB | Raw simulation logs (1,000 sessions × 4 agents) |
 | `stage0_work/step3_applicant_groups.parquet` | 58.4 MB | Stage 0 final output |
 | `stage1_work/s1_node_features_f8fixed.parquet` | 804 KB | Stage 1 final output (f8-patched) |
@@ -117,7 +153,7 @@ All four primary tests (H1 χ², H2 z-test, H2 entropy MW, H3 cluster-*z*) survi
 | `stage3_work/s3_shap_level2_nationality.xlsx` | 64 KB | SHAP H1–H3 evidence |
 | `stage4_work/postanalysis_v5c/s4v5c_mediation_analysis.xlsx` | 5.5 KB | Primary mediation pipeline |
 
-> The raw patent corpus (`b60w_data.xlsx`) and large embedding caches (`s1_embed_cache.json`, ~666 MB) are excluded from version control due to size constraints. Contact the authors for data access.
+> Large embedding caches (`s1_embed_cache.json`, ~666 MB) are excluded from version control. Running `stage1_graph_pipeline.py` regenerates them; subsequent runs use the cache. Contact the authors for pre-built cache access.
 
 ---
 
