@@ -56,6 +56,7 @@ All four primary tests (H1 χ², H2 z-test, H2 entropy MW, H3 cluster-*z*) survi
 ```
 .
 ├── README.md
+├── requirements.txt
 │
 ├── ── Pipeline Scripts ──────────────────────────────────────────────
 ├── stage0_pipeline.py              # Raw patent data ingestion & applicant grouping
