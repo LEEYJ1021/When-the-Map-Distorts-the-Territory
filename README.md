@@ -196,8 +196,7 @@ All four primary tests survive both Benjamini–Hochberg and Bonferroni correcti
         │   ├── fix_v3_ICC_diagnostics.csv
         │   ├── fix_v3_session_level_mediation.csv
         │   ├── fix_v3_GEE_results.csv
-        │   ├── fix_v3_GLMM_results.csv
-        │   └── fix_v3_reviewer_response.txt
+        │   └── fix_v3_GLMM_results.csv
         └── sobel_diagnosis/
             └── sobel_diagnosis_summary.json
 ```
