@@ -1,0 +1,3 @@
+method,M_col,a_path,b_path,indirect,sobel_z,RE_var
+GLMM (MixedLM LPM),stance_openness,-0.536,0.0,-0.0,-0.0,0.04414
+GLMM (MixedLM LPM),stance_direction,-0.7537,0.0,-0.0,-0.0,0.04414
