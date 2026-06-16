@@ -100,8 +100,7 @@ All four primary tests (H1 χ², H2 z-test, H2 entropy MW, H3 cluster-*z*) survi
     ├── fix_v3_ICC_diagnostics.csv              # ICC / DEFF per variable
     ├── fix_v3_session_level_mediation.csv      # Session-level gold standard
     ├── fix_v3_GEE_results.csv                  # GEE population-average estimates
-    ├── fix_v3_GLMM_results.csv                 # GLMM random-intercept estimates
-    └── fix_v3_reviewer_response.txt            # Reviewer response text (EN)
+    └── fix_v3_GLMM_results.csv                 # GLMM random-intercept estimates
 ```
 
 ---
