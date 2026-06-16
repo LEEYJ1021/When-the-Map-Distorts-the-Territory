@@ -1,0 +1,2 @@
+method,M_col,a_path,b_path,indirect,z_boot,ci_lo,ci_hi,n
+"Session-level OLS + bootstrap (n=1,000 sessions)",mean_openness (session mean),-0.1356,0.4582,-0.06213,-4.899,-0.0879,-0.0388,1000
