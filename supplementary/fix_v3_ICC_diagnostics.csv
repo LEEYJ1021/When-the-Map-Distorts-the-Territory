@@ -1,0 +1,5 @@
+variable,ICC,k_bar,DEFF,N_eff,problem
+converged,1.0,4.0,4.0,1000.0,⚠ ICC≈1.0: session-shared
+stance_entropy,1.0,4.0,4.0,1000.0,⚠ ICC≈1.0: session-shared
+probability,0.1028,4.0,1.308,3057.0,Agent-level OK
+stance_openness,0.0903,4.0,1.271,3148.0,Agent-level OK

@@ -1,0 +1,5 @@
+method,M_col,a_path,b_path,indirect,sobel_z
+GEE-Exchangeable,stance_openness,-0.536,0.00013,-7e-05,-12.798
+GEE-Exchangeable,stance_direction,-0.7537,9e-05,-7e-05,-12.641
+GEE-Independence,stance_openness,-0.536,1.16094,-0.62224,-7.048
+GEE-Independence,stance_direction,-0.7537,0.78083,-0.58848,-7.094
