@@ -1,5 +1,0 @@
-Y_spec,M_spec,Y_col,M_col,a_path,b_path,indirect,c_prime,se_boot,z_clust,ci_lo,ci_hi,sign_ok
-"probability (continuous, agent-level)",stance_direction_r3 (discrete),probability,stance_direction,-0.7537,0.0383,-0.02888,-0.0531,0.00184,-15.686,-0.0327,-0.0254,True
-"probability (continuous, agent-level)",stance_openness (continuous),probability,stance_openness,-0.536,0.0606,-0.0325,-0.0495,0.00184,-17.706,-0.0363,-0.029,True
-"converged (binary, session-shared)",stance_direction_r3 (discrete),converged,stance_direction,-0.7537,0.1155,-0.08705,0.087,0.00975,-8.925,-0.1064,-0.0678,True
-"converged (binary, session-shared)",stance_openness (continuous),converged,stance_openness,-0.536,0.1687,-0.09042,0.0904,0.01001,-9.033,-0.1103,-0.0707,True
