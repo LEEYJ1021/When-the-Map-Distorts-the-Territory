@@ -169,7 +169,6 @@ All four primary tests survive both Benjamini–Hochberg and Bonferroni correcti
     ├── paper_v4/
     │   ├── master_v4.json
     │   ├── methods_sobel_reconciliation_EN.txt   # Methods §3.4 — English narrative
-    │   ├── methods_sobel_reconciliation_KR.txt   # Methods §3.4 — Korean summary
     │   └── figures/
     │       ├── fig1_theory_v4.png          # Causal theory model (H1→H2→H3)
     │       ├── fig2_H1_mnar_v4.png         # H1: MNAR evidence (3-panel)
