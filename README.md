@@ -84,7 +84,6 @@ All four primary tests (H1 χ², H2 z-test, H2 entropy MW, H3 cluster-*z*) survi
 ├── paper_output_v4/
 │   ├── master_v4.json                          # Full metadata & manuscript rules
 │   ├── methods_sobel_reconciliation_EN.txt     # Methods §3.4 full English narrative
-│   ├── methods_sobel_reconciliation_KR.txt     # Methods §3.4 Korean summary
 │   └── figures/
 │       ├── fig1_theory_v4.png                  # Causal theory model (H1→H2→H3)
 │       ├── fig2_H1_mnar_v4.png                 # H1 MNAR evidence (3-panel)
