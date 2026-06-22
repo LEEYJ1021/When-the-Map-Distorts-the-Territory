@@ -194,7 +194,7 @@ source("scripts/Figures_all.R")
 .
 ├── README.md
 ├── requirements.txt
-│
+├── LICENSE
 ├── b60w_data.xlsx                  # ★ PRIMARY SOURCE — NOT tracked in git (43.4 MB)
 │                                   #   Place at repo root before running any stage.
 │
