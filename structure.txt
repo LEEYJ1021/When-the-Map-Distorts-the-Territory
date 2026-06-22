@@ -1,0 +1,98 @@
+폴더 PATH의 목록입니다.
+볼륨 일련 번호가 00000021 7C42:1A99입니다.
+C:.
+│  .gitignore
+│  b60w_data.xlsx
+│  LICENSE
+│  README.md
+│  requirements.txt
+│  structure.txt
+│  
+├─config
+│      agents_config.json
+│      
+├─data
+│      DATA_DESCRIPTION.md
+│      
+├─outputs
+│  │  fig1_theory_v6.png
+│  │  fig2_H1_mnar_v6.png
+│  │  fig4_H3_mediation_v6.png
+│  │  fig5_integrated_dashboard_v6.png
+│  │  figA_crosslevel_architecture_v6.png
+│  │  figB_PM_comparison_v6.png
+│  │  
+│  ├─paper_v4
+│  │  └─figures
+│  │          appA_composition_v4.png
+│  │          fig3_H2_convergence_v4.png
+│  │          
+│  ├─stage_work
+│  │  ├─stage0
+│  │  │      step3_applicant_groups.parquet
+│  │  │      
+│  │  ├─stage1
+│  │  │      s1_node_features_f8fixed.parquet
+│  │  │      
+│  │  ├─stage2
+│  │  │      s2_chow_b60w60_summary.xlsx
+│  │  │      s2_top20_v5.xlsx
+│  │  │      
+│  │  ├─stage3
+│  │  │      s3_shap_level2_jurisdiction.xlsx
+│  │  │      s3_shap_level2_nationality.xlsx
+│  │  │      
+│  │  └─stage4
+│  │      │  s4_simulations.jsonl
+│  │      │  
+│  │      └─postanalysis_v5c
+│  │              s4v5c_mediation_analysis.xlsx
+│  │              
+│  └─supplementary
+│      ├─fix_v3
+│      │      fig_fix_v3_panel.png
+│      │      fix_v3_GEE_results.csv
+│      │      fix_v3_GLMM_results.csv
+│      │      fix_v3_ICC_diagnostics.csv
+│      │      fix_v3_session_level_mediation.csv
+│      │      fix_v3_unified_table3.csv
+│      │      fix_v3_Y_decomposition_table.csv
+│      │      
+│      └─sobel_diagnosis
+│              sobel_diagnosis_summary.json
+│              
+├─scripts
+│  │  .Rhistory
+│  │  Figures_all.R
+│  │  stage0_pipeline.py
+│  │  stage1-2_patch_features.py
+│  │  stage1_graph_pipeline.py
+│  │  stage2-2_chow_b60w60.py
+│  │  stage2_mamba_lstm.py
+│  │  stage3_shap.py
+│  │  stage4_postanalysis_v5c.py
+│  │  stage4_sllm_multiagent.py
+│  │  
+│  └─supplementary
+│          diagnose_sobel_z_discrepancy.py
+│          extract_crosswalk_A1.py
+│          supplementary_fix_v3.py
+│          supplementary_robustness_REAL_v2.py
+│          
+├─stage0_work
+├─stage1_work
+├─stage2_work
+│  └─checkpoints
+├─stage3_work
+│  └─figures
+└─stage4_work
+    │  s4_simulations.jsonl
+    │  s4_simulation_summary.csv
+    │  
+    └─postanalysis_v5c
+            s4v5c_convergence_influence.xlsx
+            s4v5c_draft_section6.md
+            s4v5c_h3a_matrices.xlsx
+            s4v5c_mediation_analysis.xlsx
+            s4v5c_mixedlm_robustness.xlsx
+            
